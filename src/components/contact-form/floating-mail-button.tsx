@@ -1,28 +1,18 @@
-import { Dispatch, SetStateAction } from "react";
-
-import { MailIcon } from "@/components/icons";
+import { MessageCircle } from "lucide-react";
 
 export interface FloatingMailButtonProps {
-  openModal: Dispatch<SetStateAction<boolean>>;
+  openModal: () => void;
 }
-
-export const floatingMailButtonoptions = {
-  root: null,
-  rootMargin: "100px",
-  threshold: 0.1,
-};
 
 export default function FloatingMailButton({
   openModal,
 }: FloatingMailButtonProps) {
   return (
     <button
-      aria-label="open send mail modal"
-      type="button"
-      className="fixed bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent p-2 text-background transition-colors duration-150 hover:bg-accent/80 sm:bottom-8 sm:right-8 sm:h-14 sm:w-14 sm:p-3 lg:h-16 lg:w-16"
-      onClick={() => openModal(true)}
+      onClick={openModal}
+      className="items-center-justify-center fixed bottom-4 right-4 flex h-12 w-12 rounded-full bg-gradient-to-r from-blue-500 to-blue-800 p-2 text-background transition-colors duration-150 hover:from-blue-600 hover:to-blue-900 sm:bottom-8 sm:right-8 sm:h-14 sm:w-14 lg:h-16 lg:w-16"
     >
-      <MailIcon />
+      <MessageCircle size={28} />
     </button>
   );
 }

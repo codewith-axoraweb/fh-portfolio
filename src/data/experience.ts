@@ -2,35 +2,47 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
   {
+    title: "Full Stack Developer",
+    organisation: {
+      name: "Axoraweb Solutions",
+      href: "https://axorawebsolutions.com/",
+    },
+    date: "05/2026 – Present",
+    location: "Remote",
+    description:
+      "Developed scalable web and mobile applications using React.js Next.js Node.js Express.js MongoDB and React Native. Built responsive UI with Tailwind CSS and Shadcn UI. Developed REST APIs and integrated frontend with backend services. Optimized application performance by reducing load times, improving API response times, and implementing efficient database queries.",
+  },
+  {
+    title: "Full Stack Developer",
+    organisation: {
+      name: "SysRefrom International Software House",
+      href: "#",
+    },
+    date: "01/2024 – 04/2026",
+    location: "Remote",
+    description:
+      "Developed and maintained scalable React.js applications. Built responsive and reusable UI components. Integrated REST APIs and improved application performance. Optimized rendering using lazy loading and memoization. Implemented authentication and authorization using JWT.",
+  },
+  {
+    title: "WordPress Developer",
+    organisation: {
+      name: "Self Employed (Upwork)",
+      href: "#",
+    },
+    date: "06/2023 – 12/2024",
+    location: "Remote",
+    description:
+      "Developed custom WordPress websites for clients across various industries. Customized WordPress themes and integrated plugins. Built responsive, mobile friendly websites using Elementor, HTML, CSS, and JavaScript.",
+  },
+  {
     title: "Software Developer",
     organisation: {
-      name: "Skima",
-      href: "https://skima.ai/",
+      name: "Meezan Software House",
+      href: "#",
     },
-    date: "Oct 2023 - Present",
-    location: "Mumbai",
-    description: "Reactjs and Nextjs app development",
-  },
-  {
-    title: "Engineering Trainee",
-    organisation: {
-      name: "Hexaware",
-      href: "https://hexaware.com/",
-    },
-    date: "July 2023 - Sep 2023",
-    location: "Remote",
+    date: "02/2023 – 05/2023",
+    location: "Lahore",
     description:
-      "Learned to work we monorepo and got to learn application architecture, scalling and build tooling to improve CI/CD of micro services.",
-  },
-  {
-    title: "Frontend Developer Intern",
-    organisation: {
-      name: "Master Infotech",
-      href: "https://masterinfotech.com/",
-    },
-    date: "Winter - 2022",
-    location: "Remote",
-    description:
-      "Worked on a team responsible for developing new features and updating old codebases to latest technologies. Learned alot about web development and CI/CD development cycle.",
+      "Developed features using React.js Node.js and JavaScript. Fixed bugs and implemented UI improvements. Assisted with REST API development and backend tasks.",
   },
 ];

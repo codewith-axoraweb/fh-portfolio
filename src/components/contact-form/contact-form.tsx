@@ -130,7 +130,7 @@ export default function ContactForm({
           <button
             aria-label="send email"
             type="submit"
-            className="mt-4 w-full rounded-full bg-background px-4 py-3 text-center text-lg font-semibold text-accent transition-colors duration-150 hover:bg-background/90 disabled:cursor-not-allowed disabled:bg-background/80"
+            className="mt-4 w-full rounded-full bg-background px-4 py-3 text-center text-lg font-semibold text-blue-600 transition-colors duration-150 hover:bg-background/90 disabled:cursor-not-allowed disabled:bg-background/80"
             disabled={isSubmitting}
           >
             {isSubmitting ? (

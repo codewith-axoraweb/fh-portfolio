@@ -20,7 +20,7 @@ export default function SkillsShowcase({ skills }: SkillsShowcaseProps) {
   return (
     <section className="overflow-hidden px-6 py-32 sm:px-14 md:px-20">
       <div className="relative mx-auto max-w-7xl">
-        <h2 className="text-xl font-semibold text-accent sm:text-4xl">
+        <h2 className="text-xl font-semibold text-blue-600 sm:text-4xl">
           Skills
         </h2>
         {skills.map((section) => (
@@ -29,7 +29,7 @@ export default function SkillsShowcase({ skills }: SkillsShowcaseProps) {
               <span className="text-xs font-semibold text-foreground sm:text-sm">
                 {section.sectionName}
               </span>
-              <div className="mt-2 flex flex-wrap gap-4 text-xl text-accent-foreground">
+              <div className="text-blue-600-foreground mt-2 flex flex-wrap gap-4 text-xl">
                 {section.skills.map((pill, index) => (
                   <FadeRight
                     key={`lang-${index}`}

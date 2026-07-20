@@ -8,14 +8,14 @@ export default function Projects() {
   return (
     <>
       <NextSeo
-        title="Projects by Amit Chauhan - Software Developer Portfolio"
-        description="Explore a collection of projects by Amit Chauhan, a seasoned Software Developer. From innovative web applications to responsive interfaces, discover the depth and diversity of my work."
+        title="Projects by Ali Hamza - Software Developer Portfolio"
+        description="Explore a collection of Projects by Ali Hamza, a seasoned Software Developer. From innovative web applications to responsive interfaces, discover the depth and diversity of my work."
         canonical={`${siteMetadata.siteUrl}/projects`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/projects`,
-          title: "Discover Projects by Amit Chauhan - Software Developer",
+          title: "Discover Projects by Ali Hamza - Software Developer",
           description:
-            "Explore a showcase of projects crafted by Amit Chauhan, a Software Developer. Witness the fusion of creativity and technology in web development.",
+            "Explore a showcase of projects crafted byAli Hamza, a Software Developer. Witness the fusion of creativity and technology in web development.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
@@ -61,7 +61,7 @@ export default function Projects() {
               <a
                 href={`${siteMetadata.github}?tab=repositories`}
                 target="_blank"
-                className="font-semibold text-accent underline underline-offset-2 hover:text-accent/70"
+                className="font-semibold text-blue-600 underline underline-offset-2 hover:text-blue-600/70"
               >
                 Github
               </a>

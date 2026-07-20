@@ -71,7 +71,7 @@ export default function Navbar(props: NavbarProps) {
                             },
                           },
                         }}
-                        className="absolute inset-0 -z-10 rounded-full bg-accent group-hover:bg-accent/80"
+                        className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-blue-500 from-blue-500 to-blue-800 to-blue-800/80 group-hover:bg-gradient-to-r"
                       ></motion.span>
                     )}
                     {_link.title}

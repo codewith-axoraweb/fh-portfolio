@@ -27,7 +27,7 @@ export default function ContactMailToast({
       duration={3000}
       onClose={() => showToast((prev) => ({ ...prev, value: false }))}
       className={classNames(
-        "fixed right-4 top-6 z-[9999] rounded-lg bg-accent px-4 py-2 font-semibold text-white shadow-xl",
+        "fixed right-4 top-6 z-[9999] rounded-lg bg-gradient-to-r from-blue-500 to-blue-800 px-4 py-2 font-semibold text-white shadow-xl",
         toastState.type === "success"
           ? "bg-teal-500"
           : toastState.type === "warning"

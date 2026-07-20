@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 
 import Corosel from "@/components/utility/corosel";
-import { GithubIcon } from "@/components/icons";
+// import { GithubIcon } from "@/components/icons";
 
 export interface ProjectCardProps {
   name: string;
@@ -24,7 +24,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         type: "spring",
         duration: 0.4,
       }}
-      className="w-full overflow-hidden rounded-lg border border-accent/20 bg-background shadow-md transition-shadow duration-150 hover:shadow-md hover:shadow-accent/20 dark:bg-zinc-800 dark:hover:shadow-lg"
+      className="w-full overflow-hidden rounded-lg border border-blue-600/20 bg-background shadow-md transition-shadow duration-150 hover:shadow-md hover:shadow-accent/20 dark:bg-zinc-800 dark:hover:shadow-lg"
     >
       <Corosel images={props.imageUrl} aspectRatio={2.1} />
       <div className="p-3 text-foreground sm:p-4">
@@ -38,13 +38,13 @@ export default function ProjectCard(props: ProjectCardProps) {
           <p className="text-xs md:text-sm">{props.description}</p>
         </div>
         <div className="mt-6 flex items-center justify-end gap-6">
-          <a
+          {/* <a
             href={props.sourceCodeHref}
             target="_blank"
             className="flex items-center gap-1 text-xs underline md:text-sm"
           >
             <GithubIcon className="h-5 w-5" /> Source code
-          </a>
+          </a> */}
           {props.liveWebsiteHref && (
             <a
               href={props.liveWebsiteHref}

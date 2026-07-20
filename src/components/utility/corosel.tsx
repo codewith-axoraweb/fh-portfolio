@@ -89,7 +89,7 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
             className={classNames(
               "h-2 w-2 rounded-full",
               index === imageIndex
-                ? "bg-accent"
+                ? "bg-gradient-to-r from-blue-500 to-blue-800"
                 : "bg-zinc-700 dark:bg-zinc-400",
             )}
           ></span>

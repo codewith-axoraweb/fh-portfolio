@@ -39,7 +39,7 @@ export default function MobileMenu({
             leaveFrom="opacity-100 bottom-[15%]"
             leaveTo="opacity-0 bottom-full"
           >
-            <Dialog.Panel className="pointer-events-none absolute flex min-h-[85%] w-full flex-col items-center justify-center overflow-y-auto rounded-b-2xl border-2 border-accent/20 bg-background px-6 py-8 text-accent shadow-lg shadow-accent/10 md:px-10 md:py-16">
+            <Dialog.Panel className="pointer-events-none absolute flex min-h-[85%] w-full flex-col items-center justify-center overflow-y-auto rounded-b-2xl border-2 border-blue-600/20 bg-background px-6 py-8 text-blue-600 shadow-lg shadow-accent/10 md:px-10 md:py-16">
               <div className="pointer-events-auto flex flex-col items-center gap-6 text-center">
                 {routes.map((link, i) => (
                   <button
@@ -50,7 +50,7 @@ export default function MobileMenu({
                     <span
                       className={classNames(
                         pathName === link.href ? "w-full" : "w-0",
-                        "absolute -bottom-1 left-0 h-1 rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full",
+                        "absolute -bottom-1 left-0 h-1 rounded-lg bg-gradient-to-r from-blue-500 to-blue-800 transition-[width] duration-300 group-hover:w-full",
                       )}
                     ></span>
                     {link.title}
@@ -58,7 +58,7 @@ export default function MobileMenu({
                 ))}
                 <ThemeSwitch setClose={setOpenMenu} />
               </div>
-              <div className="absolute bottom-0 py-6">©2023 Amit Chauhan</div>
+              <div className="absolute bottom-0 py-6">©2023Ali Hamza</div>
             </Dialog.Panel>
           </Transition.Child>
         </div>

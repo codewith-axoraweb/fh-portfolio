@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 
 import FadeUp from "@/animation/fade-up";
 import FadeRight from "@/animation/fade-right";
-import heroProfileImg from "@/public/images/heroProfile.png";
+import heroProfileImg from "@/public/images/ali.png";
 import DuotoneImage from "./duotone-image";
 
 export default function AboutHero() {
@@ -21,7 +21,7 @@ export default function AboutHero() {
               className="h-auto w-full px-0 xl:px-16"
               alt="hero image"
               lightColor="#E0FFFF"
-              darkColor="#004D4D"
+              darkColor="#1b74bd"
               unoptimized
             />
           </FadeUp>
@@ -30,25 +30,25 @@ export default function AboutHero() {
       <div className="sm:1/2 mt-10 w-full lg:w-1/2">
         <AnimatePresence>
           <FadeUp key="title-greeting" duration={0.6}>
-            <h1 className="text-6xl font-bold text-accent sm:text-7xl md:text-6xl lg:text-5xl xl:text-7xl">
-              Hi, I&apos;m Amit Chauhan
+            <h1 className="text-6xl font-bold text-blue-600 sm:text-7xl md:text-6xl lg:text-5xl xl:text-7xl">
+              Hi, I&apos;m Ali Hamza
             </h1>
           </FadeUp>
           <FadeUp key="description-1" duration={0.6} delay={0.2}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              I turn vision into reality with code. Whether I&apos;m working on
-              a website or any digital product, I bring my commitment to design
-              excellence and user-centered thinking to every project I work on.
+              MERN Stack Developer with 5+ years of experience building scalable
+              web and mobile applications using React.js, Next.js, Node.js,
+              Express.js, MongoDB, and React Native.
             </p>
           </FadeUp>
           <FadeUp key="description-2" duration={0.6} delay={0.4}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
               Explore my latest{" "}
               <Link href="/projects" className="underline underline-offset-4">
-                <span className="text-accent">projects</span>
+                <span className="text-blue-600">projects</span>
               </Link>{" "}
-              showcasing my expertise in Reactjs, Nextjs, Javascript, Typescript
-              and web development.
+              showcasing my expertise in React.js, Next.js, Node.js, TypeScript,
+              and full-stack web development.
             </p>
           </FadeUp>
           <FadeRight
@@ -60,14 +60,14 @@ export default function AboutHero() {
             <div className="relative flex w-12 gap-4 overflow-hidden rounded-md">
               <Image
                 className="-z-10 h-full w-full bg-cover bg-no-repeat"
-                alt="Indian flag"
-                src="https://flagcdn.com/in.svg"
+                alt="Location flag"
+                src="https://flagcdn.com/pk.svg"
                 width={15}
                 height={15}
               />
             </div>
             <span className="text-lg font-medium text-foreground">
-              Mumbai, India
+              Dallas, USA
             </span>
           </FadeRight>
         </AnimatePresence>

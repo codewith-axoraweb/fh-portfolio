@@ -11,7 +11,7 @@ const CustomInput = forwardRef<HTMLInputElement, InputProps>(
         ref={ref}
         {...props}
         className={classNames(
-          "w-full rounded-lg border-none bg-background font-semibold text-accent placeholder:font-normal placeholder:text-zinc-400 focus-within:border-2 focus-within:border-accent focus-within:ring-accent",
+          "w-full rounded-lg border-none bg-background font-semibold text-blue-600 placeholder:font-normal placeholder:text-zinc-400 focus-within:border-2 focus-within:border-blue-600 focus-within:ring-accent",
           className,
         )}
       />
