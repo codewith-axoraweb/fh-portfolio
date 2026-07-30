@@ -1,7 +1,19 @@
-import { NavbarRoutes } from "@/layout/navbar";
+export interface NavigationRoute {
+  title: string;
+  href: string;
+}
 
-export const routes: NavbarRoutes = [
-  { title: "Home", href: "/" },
-  { title: "About", href: "/about" },
-  { title: "Projects", href: "/projects" },
+export const routes: NavigationRoute[] = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+  },
 ];

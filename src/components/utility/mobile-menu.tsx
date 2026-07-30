@@ -1,6 +1,7 @@
 "use client";
 
-import { Dispatch, Fragment, SetStateAction } from "react";
+import { Fragment } from "react";
+import type { Dispatch, ReactNode, SetStateAction } from "react";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
 import { Dialog, Transition } from "@headlessui/react";
@@ -13,7 +14,7 @@ interface RouteItem {
   id: string;
   title: string;
   href: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 }
 
 export interface MobileMenuProps {
@@ -26,7 +27,12 @@ export default function MobileMenu({ openMenu, setOpenMenu }: MobileMenuProps) {
   const router = useRouter();
 
   const routes: RouteItem[] = [
-    { id: "about", title: "About", href: "#about", icon: <User size={18} /> },
+    {
+      id: "about",
+      title: "About",
+      href: "#about",
+      icon: <User size={18} />,
+    },
     {
       id: "skills",
       title: "Skills",
@@ -57,7 +63,7 @@ export default function MobileMenu({ openMenu, setOpenMenu }: MobileMenuProps) {
     setOpenMenu(false);
 
     if (href.startsWith("#")) {
-      const id = href.replace("#", "");
+      const id = href.slice(1);
       const element = document.getElementById(id);
 
       if (element) {
@@ -73,7 +79,11 @@ export default function MobileMenu({ openMenu, setOpenMenu }: MobileMenuProps) {
 
   return (
     <Transition show={openMenu} as={Fragment}>
-      <Dialog as="div" className="relative z-50" onClose={setOpenMenu}>
+      <Dialog
+        as="div"
+        className="relative z-50"
+        onClose={() => setOpenMenu(false)}
+      >
         <div className="fixed inset-0 flex items-center justify-center bg-black/40">
           <Transition.Child
             as={Fragment}
