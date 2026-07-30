@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-
 import { motion } from "framer-motion";
 
 export interface FadeUpProps {
@@ -7,6 +6,7 @@ export interface FadeUpProps {
   duration: number;
   delay?: number;
   whileInView?: boolean;
+  className?: string;
 }
 
 export default function FadeUp({
@@ -14,6 +14,7 @@ export default function FadeUp({
   duration,
   delay,
   whileInView = false,
+  className,
 }: FadeUpProps) {
   const animation = {
     opacity: 1,
@@ -24,8 +25,10 @@ export default function FadeUp({
       delay,
     },
   };
+
   return (
     <motion.div
+      className={className}
       initial={{ y: 200, opacity: 0 }}
       whileInView={whileInView ? animation : {}}
       animate={!whileInView ? animation : {}}
