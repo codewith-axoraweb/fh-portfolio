@@ -27,7 +27,7 @@ export default function ContactButton() {
   }, []);
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/923245237429", "_blank");
+    window.open("https://wa.me/923091419331", "_blank");
   };
 
   return (

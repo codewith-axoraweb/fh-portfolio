@@ -31,12 +31,12 @@ export default function AboutHero() {
         <AnimatePresence>
           <FadeUp key="title-greeting" duration={0.6}>
             <h1 className="text-6xl font-bold text-blue-600 sm:text-7xl md:text-6xl lg:text-5xl xl:text-7xl">
-              Hi, I&apos;m Ali Hamza
+              Hi, I&apos;m Faqeer Hussain
             </h1>
           </FadeUp>
           <FadeUp key="description-1" duration={0.6} delay={0.2}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              MERN Stack Developer with 5+ years of experience building scalable
+              Full Stack Developer with 5+ years of experience building scalable
               web and mobile applications using React.js, Next.js, Node.js,
               Express.js, MongoDB, and React Native.
             </p>

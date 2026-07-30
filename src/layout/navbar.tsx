@@ -1,97 +1,121 @@
-import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+"use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import {
+  User,
+  FolderOpen,
+  Briefcase,
+  Mail,
+} from "lucide-react";
 
-import MenuLogo from "@/components/utility/menu-button";
-import ThemeSwitch from "@/components/utility/theme-switch";
 import AnimatedLogo from "@/animation/animated-logo";
-import MobileMenu from "@/components/utility/mobile-menu";
-import { classNames } from "@/utility/classNames";
+import ThemeSwitch from "@/components/utility/theme-switch";
 
-export type NavbarRoute = {
-  title: string;
-  href: string;
+export default function Navbar() {
+  const [activeSection, setActiveSection] = useState("about");
+
+  const navItems = [
+    { label: "About", id: "about", icon: <User size={18} /> },
+    { label: "Skills", id: "skills", icon: <Briefcase size={18} /> },
+    { label: "Experience", id: "experience", icon: <Briefcase size={18} /> },
+    { label: "Projects", id: "projects", icon: <FolderOpen size={18} /> },
+    { label: "Contact", id: "contact", icon: <Mail size={18} /> },
+  ];
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+
+  if (!element) return;
+
+  const navbarHeight = 80;
+
+  const y =
+    element.offsetTop - navbarHeight;
+
+  window.scrollTo({
+    top: y,
+    behavior: "smooth",
+  });
+
+  setActiveSection(id);
 };
 
-export type NavbarRoutes = NavbarRoute[];
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = activeSection;
 
-export interface NavbarProps {
-  routes: NavbarRoutes;
-}
+      for (const item of navItems) {
+        const section = document.getElementById(item.id);
 
-export default function Navbar(props: NavbarProps) {
-  const pathName = usePathname();
+        if (!section) continue;
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+        const rect = section.getBoundingClientRect();
 
-  const toggleModal = () => {
-    setIsModalOpen((prev) => !prev);
-  };
+        if (rect.top <= 150 && rect.bottom >= 150) {
+          current = item.id;
+          break;
+        }
+      }
+
+      if (current !== activeSection) {
+        setActiveSection(current);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [activeSection]);
 
   return (
-    <header className="sticky top-0 z-50 mt-2 px-6 py-8 sm:mt-8 sm:px-14 md:px-20">
-      <div className="mx-auto flex items-center justify-between lg:max-w-7xl">
-        <Link
-          href="/"
-          className="drop-shadow-teralight flex items-center justify-center"
-          aria-label="Return to home page"
-        >
-          <div className="relative h-12 w-12 sm:h-14 sm:w-14">
-            <AnimatedLogo />
-          </div>
-        </Link>
-        <nav className="hidden items-center gap-2 rounded-full px-2 py-2 shadow-md ring-1 ring-zinc-200 backdrop-blur-md dark:ring-accent/50 md:flex">
-          <ul className="flex gap-2 text-sm font-medium">
-            {props.routes.map((_link, index) => {
-              return (
-                <li
-                  key={index}
-                  className="my-3 transition-transform duration-100 hover:scale-[1.1]"
-                >
-                  <Link
-                    href={_link.href}
-                    className={classNames(
-                      pathName === _link.href
-                        ? "font-semibold text-background dark:hover:text-foreground"
-                        : "text-foreground",
-                      "group relative mx-3 rounded-full px-3 py-2 transition-colors duration-200",
-                    )}
-                  >
-                    {_link.href === pathName && (
-                      <motion.span
-                        layoutId="tab-pill"
-                        animate={{
-                          transition: {
-                            x: {
-                              type: "spring",
-                              stiffness: 300,
-                              damping: 30,
-                            },
-                          },
-                        }}
-                        className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-blue-500 from-blue-500 to-blue-800 to-blue-800/80 group-hover:bg-gradient-to-r"
-                      ></motion.span>
-                    )}
-                    {_link.title}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-          <ThemeSwitch />
-        </nav>
-        <AnimatePresence>
-          <MenuLogo open={isModalOpen} toggle={toggleModal} />
-        </AnimatePresence>
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50 mt-4 px-4 sm:mt-6 sm:px-6">
+  <div className="mx-auto flex max-w-7xl items-center justify-between">
+    {/* Logo */}
+    <button
+      onClick={() => scrollToSection("home")}
+      className="flex h-10 w-10 items-center justify-center sm:h-12 sm:w-12"
+    >
+      <div className="flex h-8 w-8 items-center justify-center sm:h-10 sm:w-10">
+        <AnimatedLogo />
       </div>
+    </button>
 
-      <MobileMenu
-        routes={props.routes}
-        openMenu={isModalOpen}
-        setOpenMenu={setIsModalOpen}
-      />
-    </header>
+    {/* Theme Switch */}
+    <div className="flex h-10 w-10 items-center justify-center sm:h-12 sm:w-12">
+      <div className="scale-75 sm:scale-90 md:scale-100">
+        <ThemeSwitch />
+      </div>
+    </div>
+  </div>
+</header>
+
+      {/* Spacer */}
+      <div className="h-24" />
+
+      {/* ================= BOTTOM DOCK ================= */}
+      <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2">
+        <div className="flex items-center gap-2 rounded-3xl border border-slate-200 bg-white/95 px-5 py-3 shadow-2xl backdrop-blur-xl dark:border-slate-700 dark:bg-slate-900/95">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`flex items-center gap-2 rounded-2xl px-4 py-2 text-sm font-medium transition-all duration-300 ${
+                activeSection === item.id
+                  ? "bg-slate-900 text-white dark:bg-white dark:text-slate-900"
+                  : "text-slate-600 hover:bg-slate-100 active:bg-slate-200 dark:text-slate-400 dark:hover:bg-slate-800"
+              }`}
+            >
+              {item.icon}
+              <span className="hidden sm:block">{item.label}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

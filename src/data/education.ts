@@ -7,7 +7,7 @@ export const EDUCATION: ExperienceShowcaseListItemProps[] = [
       name: "Virtual University",
       href: "https://vu.edu.pk/",
     },
-    date: "01/2018 – 01/2023",
+    date: "07/2025 – 08/2029",
     location: "Pakistan",
     description: "Bachelor of Science in Computer Software Engineering.",
   },
