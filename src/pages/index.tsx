@@ -24,8 +24,14 @@ export default function Home() {
         openGraph={{
           url: siteMetadata.siteUrl,
           title: "Faqeer Hussain - Full Stack Developer",
-          description: "Showcasing modern web and mobile applications built with MERN Stack.",
-          images: [{ url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`, alt: "Faqeer Hussain Portfolio" }],
+          description:
+            "Showcasing modern web and mobile applications built with MERN Stack.",
+          images: [
+            {
+              url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
+              alt: "Faqeer Hussain Portfolio",
+            },
+          ],
           siteName: siteMetadata.siteName,
           type: "website",
         }}
@@ -46,10 +52,7 @@ export default function Home() {
           href="/images/projects/logos/logo.png"
         />
 
-        <link
-          rel="apple-touch-icon"
-          href="/images/projects/logos/logo.png"
-        />
+        <link rel="apple-touch-icon" href="/images/projects/logos/logo.png" />
 
         {siteMetadata.googleSiteVerification && (
           <meta
@@ -80,7 +83,10 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
+      <section
+        id="projects"
+        className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20"
+      >
         <div className="mx-auto max-w-7xl">
           <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
             Projects

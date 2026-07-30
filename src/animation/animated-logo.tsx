@@ -14,7 +14,7 @@ export default function AnimatedLogo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="w-full h-full flex items-center justify-center"
+        className="flex h-full w-full items-center justify-center"
       >
         <Image
           src="/images/projects/logos/logo.png"
@@ -22,7 +22,7 @@ export default function AnimatedLogo() {
           width={220}
           height={220}
           priority
-          className="w-full h-full object-contain"
+          className="h-full w-full object-contain"
         />
       </motion.div>
     </AnimatePresence>

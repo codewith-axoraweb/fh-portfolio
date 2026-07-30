@@ -26,10 +26,7 @@ export default function ExperienceShowcaseList(
         {props.title}
       </h2>
 
-      <div
-        ref={ref}
-        className="relative mx-auto w-full md:w-[80%]"
-      >
+      <div ref={ref} className="relative mx-auto w-full md:w-[80%]">
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top-5 h-full w-[5px] origin-top rounded-lg bg-gradient-to-r from-blue-500 to-blue-800"
@@ -37,10 +34,7 @@ export default function ExperienceShowcaseList(
 
         <ul className="ml-4 w-full">
           {props.details.map((detail, index) => (
-            <ExperienceShowcaseListItem
-              key={index}
-              {...detail}
-            />
+            <ExperienceShowcaseListItem key={index} {...detail} />
           ))}
         </ul>
       </div>

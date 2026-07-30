@@ -1,12 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  User,
-  FolderOpen,
-  Briefcase,
-  Mail,
-} from "lucide-react";
+import { User, FolderOpen, Briefcase, Mail } from "lucide-react";
 
 import AnimatedLogo from "@/animation/animated-logo";
 import ThemeSwitch from "@/components/utility/theme-switch";
@@ -22,23 +17,22 @@ export default function Navbar() {
     { label: "Contact", id: "contact", icon: <Mail size={18} /> },
   ];
 
-const scrollToSection = (id: string) => {
-  const element = document.getElementById(id);
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
 
-  if (!element) return;
+    if (!element) return;
 
-  const navbarHeight = 80;
+    const navbarHeight = 80;
 
-  const y =
-    element.offsetTop - navbarHeight;
+    const y = element.offsetTop - navbarHeight;
 
-  window.scrollTo({
-    top: y,
-    behavior: "smooth",
-  });
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
 
-  setActiveSection(id);
-};
+    setActiveSection(id);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,26 +67,26 @@ const scrollToSection = (id: string) => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 mt-4 px-4 sm:mt-6 sm:px-6">
-  <div className="mx-auto flex max-w-7xl items-center justify-between">
-    {/* Logo */}
-    <button
-      onClick={() => scrollToSection("home")}
-      className="flex h-10 w-10 items-center justify-center sm:h-12 sm:w-12"
-    >
-      <div className="flex h-8 w-8 items-center justify-center sm:h-10 sm:w-10">
-        <AnimatedLogo />
-      </div>
-    </button>
+      <header className="fixed left-0 right-0 top-0 z-50 mt-4 px-4 sm:mt-6 sm:px-6">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          {/* Logo */}
+          <button
+            onClick={() => scrollToSection("home")}
+            className="flex h-10 w-10 items-center justify-center sm:h-12 sm:w-12"
+          >
+            <div className="flex h-8 w-8 items-center justify-center sm:h-10 sm:w-10">
+              <AnimatedLogo />
+            </div>
+          </button>
 
-    {/* Theme Switch */}
-    <div className="flex h-10 w-10 items-center justify-center sm:h-12 sm:w-12">
-      <div className="scale-75 sm:scale-90 md:scale-100">
-        <ThemeSwitch />
-      </div>
-    </div>
-  </div>
-</header>
+          {/* Theme Switch */}
+          <div className="flex h-10 w-10 items-center justify-center sm:h-12 sm:w-12">
+            <div className="scale-75 sm:scale-90 md:scale-100">
+              <ThemeSwitch />
+            </div>
+          </div>
+        </div>
+      </header>
 
       {/* Spacer */}
       <div className="h-24" />

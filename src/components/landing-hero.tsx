@@ -38,13 +38,13 @@ export default function LandingHero() {
   const handleHireMe = () => {
     const phone = "923091419331";
     const message = encodeURIComponent(
-      "Hi Faqeer, I want to discuss a project with you."
+      "Hi Faqeer, I want to discuss a project with you.",
     );
 
     window.open(
       `https://wa.me/${phone}?text=${message}`,
       "_blank",
-      "noopener,noreferrer"
+      "noopener,noreferrer",
     );
   };
 
@@ -58,24 +58,25 @@ export default function LandingHero() {
         type: "spring",
         stiffness: 100,
       }}
-className="flex min-h-[calc(100vh-200px)] items-center px-6 py-6 sm:py-16 md:py-20 sm:px-14 md:min-h-[calc(100vh-140px)] md:px-20 lg:py-0 mt-0 md:mt-10 mb-20"    >
+      className="mb-20 mt-0 flex min-h-[calc(100vh-200px)] items-center px-6 py-6 sm:px-14 sm:py-16 md:mt-10 md:min-h-[calc(100vh-140px)] md:px-20 md:py-20 lg:py-0"
+    >
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-20">
           {/* LEFT */}
           <div className="space-y-8">
             <AnimatePresence>
               <FadeUp duration={0.6}>
-                <h1 className="bg-gradient-to-br from-zinc-900 via-blue-700 to-blue-900 bg-clip-text text-5xl font-bold leading-none text-transparent sm:text-7xl md:text-8xl dark:from-white dark:via-blue-400 dark:to-blue-500">
+                <h1 className="bg-gradient-to-br from-zinc-900 via-blue-700 to-blue-900 bg-clip-text text-5xl font-bold leading-none text-transparent dark:from-white dark:via-blue-400 dark:to-blue-500 sm:text-7xl md:text-8xl">
                   Faqeer Hussain
                 </h1>
 
-                <p className="mt-4 text-2xl font-semibold text-zinc-700 md:text-3xl dark:text-zinc-300">
+                <p className="mt-4 text-2xl font-semibold text-zinc-700 dark:text-zinc-300 md:text-3xl">
                   Full Stack Developer
                 </p>
               </FadeUp>
 
               <FadeUp duration={0.7} delay={0.15}>
-                <div className="max-w-2xl text-lg leading-relaxed text-zinc-600 md:text-xl dark:text-zinc-400">
+                <div className="max-w-2xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400 md:text-xl">
                   Full Stack Developer with 3 years of experience building
                   scalable web and mobile applications using React.js, Next.js,
                   Node.js, Express.js, MongoDB, and React Native. Passionate
@@ -95,7 +96,6 @@ className="flex min-h-[calc(100vh-200px)] items-center px-6 py-6 sm:py-16 md:py-
                     className="group flex items-center gap-3 rounded-2xl bg-zinc-900 px-8 py-4 font-semibold text-white shadow-lg shadow-zinc-900/30 transition-all duration-300 hover:bg-black dark:bg-white dark:text-zinc-900"
                   >
                     Download CV
-
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5"
