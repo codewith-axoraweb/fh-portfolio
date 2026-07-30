@@ -20,7 +20,7 @@ export default function Footer() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl px-1 text-sm leading-6 text-blue-100 sm:px-0 sm:text-base md:text-lg">
-            Im available for freelance projects, remote jobs, and long-term
+            I'm available for freelance projects, remote jobs, and long-term
             collaborations. Have an idea or project? Let's discuss it on
             WhatsApp and build something amazing together.
           </p>
