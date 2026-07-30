@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 rounded-3xl bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-8 text-white shadow-2xl sm:gap-8 sm:px-10 sm:py-12 lg:px-20 lg:py-20">
         <div className="text-center">
           <span className="inline-block rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-wide text-blue-700 sm:text-sm">
-            Let's Work Together
+            Let&apos;s Work Together
           </span>
 
           <h2 className="mt-5 text-2xl font-bold leading-tight sm:text-4xl lg:text-6xl">
@@ -20,9 +20,9 @@ export default function Footer() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl px-1 text-sm leading-6 text-blue-100 sm:px-0 sm:text-base md:text-lg">
-            I'm available for freelance projects, remote jobs, and long-term
-            collaborations. Have an idea or project? Let's discuss it on
-            WhatsApp and build something amazing together.
+            I&apos;m available for freelance projects, remote jobs, and
+            long-term collaborations. Have an idea or project? Let&apos;s
+            discuss it on WhatsApp and build something amazing together.
           </p>
         </div>
 
