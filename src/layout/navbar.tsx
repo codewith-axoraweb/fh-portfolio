@@ -68,7 +68,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed left-0 right-0 top-0 z-50 mt-4 px-4 sm:mt-6 sm:px-6">
-        <div className="mx-auto flex max-w-7xl items-center justify-between">
+        <div className="mx-auto flex w-full max-w-[1100px] items-center justify-between xl:max-w-[1210px] 2xl:max-w-[1360px]">
           {/* Logo */}
           <button
             onClick={() => scrollToSection("home")}

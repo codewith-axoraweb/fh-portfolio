@@ -1,6 +1,5 @@
 import { type ProjectCardProps } from "@/components/projects/project-card";
 import { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   {
@@ -85,16 +84,13 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     liveWebsiteHref: "https://manygames.vercel.app",
   },
   {
-    name: "My portfolio",
+    name: "WOAH – International Animal Health Standards Portal",
     favicon: "/favicon.ico",
-    imageUrl: [
-      "/images/projects/portfolioDark.webp",
-      "/images/projects/portfolioLight.webp",
-    ],
+    imageUrl: ["/images/projects/woha.png", "/images/projects/woha2.png"],
     description:
-      "My personal portfolio website made using Nextjs, tailwindcss and framer motion.",
-    sourceCodeHref: "https://github.com/BUMBAIYA/amitchauhan-v2",
-    liveWebsiteHref: siteMetadata.siteUrl,
+      "International animal healthcare platform built with Next.js, Node.js, TypeScript and Tailwind CSS.",
+    sourceCodeHref: "https://www.woah.org/en/home/",
+    liveWebsiteHref: "https://www.woah.org/en/home/",
   },
   {
     name: "Covid Tracker",
